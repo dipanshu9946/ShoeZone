@@ -17,7 +17,20 @@
         <div class="nav container">
             <a href="#" class="logo">Shoezone</a>
             <!--cart icon-->
-            <i class='bx bx-shopping-bag' id="cart-icon"></i>
+            <i class='bx bx-shopping-bag' id="cart-icon" ></i>
+            <a id="cart-text" style="cursor: pointer;">Cart</a>
+            
+            <div class="dropdown">
+                <i class='bx bx-user-circle' id="user-icon"></i>
+                <div class="dropdown-content">
+                    <a id="Logout" style="cursor: pointer;">Log Out</a>
+                    <!-- <a href="./signup/signup-page.html" style="cursor: pointer;">Sign In</a>
+                        <a href="#">Link 3</a> -->
+                </div>
+                <span id="current-user"></span>
+              </div>
+
+
             <!--cart-->
             <div class="cart">
                 <h2 class="cart-title">Your Cart</h2>
@@ -30,8 +43,14 @@
                     <div class="total-tital">Total</div>
                     <div class="total-price">$0</div>
                 </div>
+
+                <!--Address box-->
+                <label for="address">Confirm Address:</label>
+                <textarea type="text" class="address-box" id="address-box"></textarea>
+
                 <!--buy button-->
-                <button type="button" class="btn-buy">Buy Now</button>
+                <button type="button" class="btn-buy" disabled>Buy Now</button>
+                
                 <!--cart-close-->
                 <i class='bx bxs-x-square' id="close-cart"></i>
 

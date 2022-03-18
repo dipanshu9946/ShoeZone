@@ -1,14 +1,46 @@
-// cart
+const userString = localStorage.getItem("user");
+let user = null;
 
+if(userString == null || userString.trim() == ""){
+    document.getElementById("current-user").innerText = ""
+}
+else{
+    user = parseData(userString)
+    document.getElementById("address-box").value = user ? user.address : ""
+    document.getElementById("current-user").innerText = user ? user.name : ""
+}
+
+if (user){
+    document.getElementById("Logout").innerText = "Log Out"
+}
+else{
+    document.getElementById("Logout").innerText = "Log In"
+}
+
+function parseData(data) {
+    if (!data) return {};
+    if (typeof data === 'object') return data;
+    if (typeof data === 'string') return JSON.parse(data);
+
+    return {};
+}
+// cart
+let Logout = document.querySelector('#Logout');
 let cartIcon = document.querySelector('#cart-icon');
 let cart = document.querySelector('.cart');
 let closeCart = document.querySelector('#close-cart');
 let removeItem = document.querySelector('#remove-item'); 
 var quantityInputs = document.getElementsByClassName("cart-quantity");
+
 for (var i = 0; i < quantityInputs.length; i++){
     var input = quantityInputs[i];
     input.addEventListener("change", quantityChanged);
 }
+//logout
+Logout.onclick = () => {
+    localStorage.setItem("user","")
+        window.location.href="./login/login-page.html"
+};
 //add to cart
 var addCart = document.getElementsByClassName('add-cart');
    for (var i = 0; i < addCart.length; i++) {

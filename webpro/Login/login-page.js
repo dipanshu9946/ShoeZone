@@ -7,11 +7,14 @@ var data = {
 const loginForm = document.getElementById("login-form");
 const loginButton = document.getElementById("login-form-submit");
 
+localStorage.setItem("address","7, Nand Nagar, Mohadi Roada, Jalgaon")
+console.log(localStorage.getItem("address"))
+
+
 loginButton.addEventListener("click", (e) => {
     e.preventDefault();
     const username = document.getElementById("username-field").value;
     const password = document.getElementById("Password-field").value;
-    
     // var data = new FormData();
     // data.append('user', username);
     // data.append('pass', password);
@@ -35,9 +38,8 @@ loginButton.addEventListener("click", (e) => {
             error.innerText="Wrong Username or Password!!!"
             return;
         }
+        localStorage.setItem("user",JSON.stringify(response.user))
         window.location.href="./../index.html"
-        console.log(this)
-        console.log(response)
     }
     
     // Send a request

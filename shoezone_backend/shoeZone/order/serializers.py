@@ -8,6 +8,7 @@ from product.models import Product
 
 
 from .models import Order, OrderedProduct
+    
 
 
 class OrderedProductSerializer(serializers.HyperlinkedModelSerializer):
