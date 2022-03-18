@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login-page.css">
+    <script defer src="login-page.js"></script>
+</head>
+<body style="background-image: url('./../img/home-bg.jpg');">
+<!--<h2>Login</h2>-->
+<div class="wrapper">
+
+    <form class="login-form">
+        <div class="imgcontainer">
+            <img src=
+            "./../img/logo.jpeg" 
+                 alt="Avatar" class="avatar">
+        </div>
+        <label>Email</label>
+        <input type="text" placeholder="Enter Email" name="username" id="username-field" class="login-form-field" required>
+
+        <label>Password</label>
+        <input type="password" placeholder="Enter Password" name="psw" id="Password-field" class="login-form-field" required>
+
+        <button type="submit" value="login" id="login-form-submit">Login</button>
+        <a href="./../index.html">Skip Login</a>
+        <p id="login-error-msg" style="opacity: 0;color: red;text-align: center;">Incorrect Username Password</p>
+    </form>
+
+</div>
+
+</body>
+
+</html>
+

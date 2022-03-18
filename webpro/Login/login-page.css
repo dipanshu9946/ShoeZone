@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400, 500, 600, 700 &display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box;*/
+    font-family: 'Poppins', sans-serif;
+}
+/*set border to the form*/
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #4070f4;
+}
+
+.wrapper {
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    background: #fff;
+    padding: 5px;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/*form {
+    border: 3px solid #f1f1f1;
+}*/
+
+
+/*assign full width inputs*/
+input[type=text],
+input[type=password] {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    font-size: 17px;
+    font-weight: 400;
+    color: #333;
+    border: 1.5px solid #C7BEBE;
+    border-bottom-width: 2.5px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.login-form-field {
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+}
+
+
+/*set a style for the buttons*/
+button {
+    background-color: #4070f4;
+    color: white;
+    padding: 5px 10px;
+    margin: 23px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 25px;
+    border-radius: 6px;
+    letter-spacing: 1px;
+}
+/* set a hover effect for the button*/
+
+button:hover {
+    opacity: 0.8;
+}
+
+/*centre the display image inside the container*/
+
+.imgcontainer {
+    text-align: center;
+    margin: 2px 0 12px;
+}
+/*set image properties*/
+
+img.avatar {
+    width: 28%;
+    border-radius: 50%;
+}
+/*set padding to the container*/
+
+.container {
+    padding: 16px;
+
+}
+/*set the forgot password text*/
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+/*set styles for span and cancel button on small screens*/
+
+@media screen and(max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+}
+
+.login-form {
+    background: rgba(#13232f, 0.9);
+    padding: 40px;
+    max-width: 600px;
+    /* margin: 40px auto; */
+    border-radius: 4px;
+    box-shadow: 0 4px 10px 4px rgba(#13232f, 0.3);
+    font-family: 'Poppins', sans-serif;
+}
