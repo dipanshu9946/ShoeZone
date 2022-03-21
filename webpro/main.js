@@ -1,3 +1,37 @@
+const xhttp = new XMLHttpRequest()
+let productlist = []
+xhttp.open("GET", "http://localhost:8000/products/");
+xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+xhttp.send();
+
+
+xhttp.onload = function() {
+    const response = JSON.parse(this.response)
+
+    for (var i = 0; i < response.length; i++){
+        console.log(i)
+        var product = response[i]
+        
+        var templat = `<div class="product-box">
+        <img src="${product.image}" alt="" class="product-img">
+        <h2 class="product-title">${product.name}</h2>
+        <span class="price">${product.price}</span><br><br>
+        <i class='bx bx-shopping-bag add-cart' id='add-cart${i}'></i>
+        </div>`
+
+
+        var shopcontent = document.getElementsByClassName('shop-content')[0]
+        shopcontent.innerHTML = templat + shopcontent.innerHTML;
+    }
+    var addCart = document.getElementsByClassName('add-cart');
+    for (var i = 0; i < addCart.length; i++) {
+        var button = addCart[i];
+        button.addEventListener('click',addCartClicked);
+    }     
+    
+}
+
+
 const userString = localStorage.getItem("user");
 let user = null;
 
@@ -42,11 +76,11 @@ Logout.onclick = () => {
         window.location.href="./login/login-page.html"
 };
 //add to cart
-var addCart = document.getElementsByClassName('add-cart');
-   for (var i = 0; i < addCart.length; i++) {
-      var button = addCart[i];
-      button.addEventListener('click',addCartClicked);
-   }
+// var addCart = document.getElementsByClassName('add-cart');
+//    for (var i = 0; i < addCart.length; i++) {
+//       var button = addCart[i];
+//       button.addEventListener('click',addCartClicked);
+//    }
    
 //open cart
 cartIcon.onclick = () => {
@@ -182,8 +216,5 @@ function updatetotal(){
         document.getElementsByClassName("total-price")[0].innerText = "$" + total;
     
 }
-
-
-
 
 

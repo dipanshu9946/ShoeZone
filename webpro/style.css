@@ -238,7 +238,7 @@ label {
 .product-title {
     font-size: 1.1rem;
     font-weight: 600;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     margin-bottom: 0.5rem;
 }
 .price {
@@ -255,6 +255,12 @@ label {
 }
 .add-cart:hover {
     background: hsl(249 , 32% , 17%);
+}
+#message {
+    margin-right: 25px;
+    border: black;
+    border-radius: inherit;
+    font-family: ui-sans-serif;
 }
 /* breakpoints / making responsive*/
 @media(max-width: 1080px) {
@@ -291,3 +297,4 @@ label {
         width: 280px;
     }
 }
+/* ------------------------------------------------------------------------- */

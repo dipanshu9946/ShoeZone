@@ -6,23 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--<title> Registration or Sign Up form in HTML CSS | CodingLab </title>-->
     <link rel="stylesheet" href="singup-page.css">
+    <script defer src="signup-page.js"></script>
    </head>
 <body  style="background-image: url('./../img/home-bg.jpg');">
   <div class="wrapper">
     <h2>Create New Account</h2>
     <form class="signup-page"> 
       <div class="input-box">
-        <input type="text" placeholder="Enter your name" id="signup-name-field" class="signup-form-field"required>
+        <input type="text" placeholder="First Name" id="signup-firstname-field" class="signup-form-field"required>
+      </div>
+      <div class="input-box">
+        <input type="text" placeholder="Last Name" id="signup-lastname-field" class="signup-form-field"required>
       </div>
       <div class="input-box">
         <input type="text" placeholder="Enter your email" id="signup-username-field" class="signup-form-field" required>
       </div>
       <div class="input-box">
-        <input type="password" placeholder="Create password" id= signup-password-field class="signup-form-field" required>
+        <input type="text" placeholder="Phone Number" id="signup-number-field" class="signup-form-field"required>
       </div>
       <div class="input-box">
-        <input type="password1" placeholder="Confirm password" id="signup-password1-field" class="signup-form-field" required>
+        <input type="text" placeholder="Enter your Address" id="signup-address-field" class="signup-form-field"required>
       </div>
+      <div class="input-box">
+        <input type="password" placeholder="Create password" id= "signup-password-field" class="signup-form-field" required>
+      </div>
+      <div class="input-box">
+        <input type="password" placeholder="Confirm password" id="signup-password1-field" class="signup-form-field" required>
+      </div>
+      <p id="password-error-msg" style="opacity: 0;color: red;text-align: center;">Password didn't matched</p>
       <div class="policy">
         <input type="checkbox">
         <h3>I accept all terms & condition</h3>
@@ -33,6 +44,7 @@
       <div class="text">
         <h3>Already have an account? <a href="./../login/login-page.html">Login now</a></h3>
       </div>
+      
     </form>
   </div>
 </body>
