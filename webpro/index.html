@@ -5,18 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-commerce website - shopping cart</title>
+    <link rel="shortcut icon" href="./img/shoezonelogo1.jpg" type="image/x-icon" />
+    <title>ShoeZone</title>
     <!--link to css-->
     <link rel="stylesheet" href="style.css">
     <!--box icons-->
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 </head>
 
 <body>
     <header>
         <div class="nav container">
-            <a href="#" class="logo">Shoezone</a>
+            <a href="#" class="logo">ShoeZone</a>
             <!--cart icon-->
             <i class='bx bx-shopping-bag' id="cart-icon" ></i>
             <a id="cart-text" style="cursor: pointer;">Cart</a>
@@ -25,8 +28,8 @@
                 <i class='bx bx-user-circle' id="user-icon"></i>
                 <div class="dropdown-content">
                     <a id="Logout" style="cursor: pointer;">Log Out</a>
-                    <!-- <a href="./signup/signup-page.html" style="cursor: pointer;">Sign In</a>
-                        <a href="#">Link 3</a> -->
+                    <a href="#" style="cursor: pointer;">Sign In</a>
+                    <!-- <a href="#">Link 3</a> --> 
                 </div>
                 <span id="current-user"></span>
               </div>
@@ -50,7 +53,7 @@
                 <textarea type="text" class="address-box" id="address-box"></textarea>
 
                 <!--buy button-->
-                <button type="button" class="btn-buy" disabled>Buy Now</button>
+                <button type="button" class="btn-buy">Buy Now</button>
                 
                 <!--cart-close-->
                 <i class='bx bxs-x-square' id="close-cart"></i>
@@ -58,13 +61,66 @@
             </div>
         </div>
     </header>
-    <!--shop-->
+    <!----------------shop-------------------->
     <section class="shop container">
-        <h2 class="section-title">shop products</h2>
+        <h2 class="section-title">Shop Products</h2>
         <!--content-->
         <div class="shop-content">
-            <!--box-1-->
-            <div class="product-box">
+     <!---------------Here Products will get added by JS--------------->
+            
+
+        </div>
+    </section>
+    <!------------------link to JS-------------------->
+    <script src="main.js"></script>
+
+<!-- --------------------------footer ---------------------------- -->
+
+    <div class="footer-clean">
+    <footer>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-4 col-md-3 item">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Web design</a></li>
+                        <li><a href="#">Development</a></li>
+                        <li><a href="#">Hosting</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 col-md-3 item">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="#">Company</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Legacy</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 col-md-3 item">
+                    <h3>Careers</h3>
+                    <ul>
+                        <li><a href="#">Job openings</a></li>
+                        <li><a href="#">Employee success</a></li>
+                        <li><a href="#">Benefits</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a>
+                    <p class="copyright"> ShoeZone © 2020</p>
+                 </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+
+<!-- ------------------------------------------------------------ -->
+</body>
+
+</html>
+
+<!-- 
+    <div class="product-box">
                 <img src="img/product1.jpg" alt="" class="product-img">
                 <h2 class="product-title">00001sdf</h2>
                 <span class="price">$25</span>
@@ -72,7 +128,7 @@
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
 
-            <!--box-2-->
+            
             <div class="product-box">
                 <img src="img/product2.jpg" alt="" class="product-img">
                 <h2 class="product-title">00002</h2>
@@ -80,19 +136,13 @@
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
 
-            <!--box-3-->
             <div class="product-box">
                 <img src="img/product3.jpg" alt="" class="product-img">
                 <h2 class="product-title">00003</h2>
                 <span class="price">$245</span>
-
-                <!-- ----------------------------- -->
-                
-                <!-- --------------------------------------- -->
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
 
-            <!--box-4-->
             <div class="product-box">
                 <img src="img/product4.jpg" alt="" class="product-img">
                 <h2 class="product-title">00004</h2>
@@ -100,7 +150,6 @@
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
 
-            <!--box-5-->
             <div class="product-box">
                 <img src="img/product5.jpg" alt="" class="product-img">
                 <h2 class="product-title">00005</h2>
@@ -108,7 +157,6 @@
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
 
-            <!--box-6-->
             <div class="product-box">
                 <img src="img/product6.jpg" alt="" class="product-img">
                 <h2 class="product-title">00006</h2>
@@ -116,7 +164,6 @@
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
 
-            <!--box-7-->
             <div class="product-box">
                 <img src="img/product7.jpg" alt="" class="product-img">
                 <h2 class="product-title">00007</h2>
@@ -124,7 +171,6 @@
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
 
-            <!--box-8-->
             <div class="product-box">
                 <img src="img/product8.jpg" alt="" class="product-img">
                 <h2 class="product-title">00008</h2>
@@ -132,17 +178,4 @@
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
 
-
-        </div>
-    </section>
-    <!--link to JS-->
-    <script src="main.js"></script>
-
-
-
-
-
-
-</body>
-
-</html>
+ -->
