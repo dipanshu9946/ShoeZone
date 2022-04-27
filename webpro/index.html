@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./img/shoezonelogo1.jpg" type="image/x-icon" />
-    <title>ShoeZone</title>
+    <title>ShoeZone | E-commerce</title>
     <!--link to css-->
     <link rel="stylesheet" href="style.css">
     <!--box icons-->
@@ -19,17 +19,20 @@
 <body>
     <header>
         <div class="nav container">
-            <a href="#" class="logo">ShoeZone</a>
+            <a class="logo" style = "cursor: pointer;">ShoeZone</a>
             <!--cart icon-->
             <i class='bx bx-shopping-bag' id="cart-icon" ></i>
             <a id="cart-text" style="cursor: pointer;">Cart</a>
+
+            <!-- <i class='bx bx-clipboard' id="cart-icon" ></i>
+            <a id="cart-text" style="cursor: pointer;">My Order</a> -->
             
             <div class="dropdown">
                 <i class='bx bx-user-circle' id="user-icon"></i>
                 <div class="dropdown-content">
                     <a id="Logout" style="cursor: pointer;">Log Out</a>
-                    <a href="#" style="cursor: pointer;">Sign In</a>
-                    <!-- <a href="#">Link 3</a> --> 
+                    <a href="./signup/signup-page.html" style="cursor: pointer;">Sign In</a> 
+                    <a href="#" style="cursor: pointer;">My Order</a> 
                 </div>
                 <span id="current-user"></span>
               </div>
@@ -53,7 +56,8 @@
                 <textarea type="text" class="address-box" id="address-box"></textarea>
 
                 <!--buy button-->
-                <button type="button" class="btn-buy">Buy Now</button>
+                <a href="./checkout/checkout.html"><button type="button" class="btn-buy" >Buy Now</button></a>
+                
                 
                 <!--cart-close-->
                 <i class='bx bxs-x-square' id="close-cart"></i>
@@ -61,8 +65,40 @@
             </div>
         </div>
     </header>
+    <!-- ------------------slideshow ---------->
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="./img/background1.jpg" style="width:100%">
+            <div class="text"></div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="./img/background2.jpg" style="width:100%">
+            <div class="text"></div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+                <img src="./img/background3.jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+
     <!----------------shop-------------------->
-    <section class="shop container">
+    <section class="shop container" style="padding-top: 6px;">
         <h2 class="section-title">Shop Products</h2>
         <!--content-->
         <div class="shop-content">

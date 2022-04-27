@@ -1,4 +1,20 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400, 500, 600, 700 &display=swap');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ @import url('https://fonts.googleapis.com/css?family=Poppins:400, 500, 600, 700 &display=swap');
 * {
 
     padding: 0;
@@ -13,6 +29,7 @@ body {
     justify-content: center;
     background: #4070f4;
 }
+
 .wrapper {
     position: relative;
     max-width: 430px;
@@ -58,6 +75,7 @@ form .input-box input {
     border-radius: 6px;
     transition: all 0.3s ease;
 }
+
 .input-box input:focus,
 .input-box input:valid {
     border-color: #4070f4;
@@ -93,4 +111,4 @@ form .text h3 a {
 }
 form .text h3 a:hover {
     text-decoration: underline;
-}
+} 

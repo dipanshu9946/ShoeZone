@@ -122,7 +122,6 @@ function ready() {
   }
   //
 }
-
 //Buy Button
 function buyButtonClicked() {
   /*----------------------------------------------------*/
@@ -157,20 +156,10 @@ function buyButtonClicked() {
     products: products,
   };
 
-  xhttp.open("POST", "http://localhost:8000/orders/create");
-
-  xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-  xhttp.send(JSON.stringify(data));
-
-  /*------------------------------------------------------ */
-  var cartContent = document.getElementsByClassName("cart-content")[0];
-  while (cartContent.hasChildNodes()) {
-    cartContent.removeChild(cartContent.firstChild);
-  }
-  updatetotal();
+  localStorage.setItem("order", JSON.stringify(data));
 }
 
-//Buy Button work
+// Buy Button work
 document
   .getElementsByClassName("btn-buy")[0]
   .addEventListener("click", buyButtonClicked);
@@ -249,4 +238,36 @@ function updatetotal() {
   total = Math.round(total * 100) / 100;
 
   document.getElementsByClassName("total-price")[0].innerText = "$" + total;
+}
+
+// -----------------------------------slideshow
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides((slideIndex += n));
+}
+
+function currentSlide(n) {
+  showSlides((slideIndex = n));
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
 }
