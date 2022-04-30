@@ -10,4 +10,5 @@ router.register(r'', views.OrderViewSet)
 urlpatterns = [
     path('', include(router.urls)),
     path('create', views.create),
+    path('cancel/<int:id>', views.cancel),
 ]

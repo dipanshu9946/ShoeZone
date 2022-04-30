@@ -189,6 +189,7 @@ async function addCartClicked(event) {
   addProductToCart(title, price, productImg);
   updatetotal();
 }
+//for product add
 
 function addProductToCart(title, price, productImg) {
   var cartShopBox = document.createElement("div");

@@ -8,15 +8,15 @@ from product.models import Product
 
 
 from .models import Order, OrderedProduct
-    
 
 
 class OrderedProductSerializer(serializers.HyperlinkedModelSerializer):
 
     product = ProductSerializer(many=False, required=True)
+
     class Meta:
         model = OrderedProduct
-        fields = ('product', 'quantity' )
+        fields = ('product', 'quantity')
 
 
 class OrderSerializer(serializers.ModelSerializer):
@@ -27,4 +27,5 @@ class OrderSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Order
-        fields = ('id','price', 'image','status','address','user','products')
+        fields = ('id', 'price', 'image', 'status', 'address',
+                  'phonenumber', 'firstname', 'lastname', 'user', 'products', 'createdAt')
