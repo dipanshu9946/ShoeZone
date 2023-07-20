@@ -1,0 +1,8 @@
+hello dipanshu here 
+adding this file to repo using
+
+git add "file name"
+(For one file at a time)
+
+for multi file at a time we use
+git add.
